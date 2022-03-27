@@ -11,6 +11,7 @@ public class DayCareDAO {
 
 	public boolean saveKidDetails(int rNo,String name) throws SQLException{
 
+		
 		DriverManager.registerDriver(new OracleDriver());
 		Connection con= DriverManager.getConnection("Jdbc:oracle:thin:@localhost:1521:xe", "system", "manager");
 		PreparedStatement pstmt =con.prepareStatement("insert into kidsdetails values(?,?)");
